@@ -1,5 +1,5 @@
 package ru.hivislav.edamamtestapp.domain.entities
 
-data class Hints(
-    val hints: List<Food>
+data class Hint(
+    val food: Food
 )
