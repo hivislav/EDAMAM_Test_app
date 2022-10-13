@@ -23,6 +23,16 @@ android {
         }
     }
 
+    buildTypes.each {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("app.properties").newDataInputStream())
+        def edamamAppId = properties.getProperty("EDAMAM_APP_ID", "")
+        it.buildConfigField "String", "EDAMAM_APP_ID", edamamAppId
+
+        def edamamAppKey = properties.getProperty("EDAMAM_APP_KEY", "")
+        it.buildConfigField "String", "EDAMAM_APP_KEY", edamamAppKey
+    }
+
     buildFeatures {
         viewBinding true
     }
