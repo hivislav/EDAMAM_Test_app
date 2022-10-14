@@ -1,6 +1,5 @@
 package ru.hivislav.edamamtestapp.data
 
-import android.util.Log
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -9,7 +8,7 @@ import ru.hivislav.edamamtestapp.domain.entities.HintsList
 import ru.hivislav.edamamtestapp.domain.entities.Nutrients
 import ru.hivislav.edamamtestapp.domain.repositories.RemoteRepository
 
-class RemoteRepositoryImpl: RemoteRepository {
+object RemoteRepositoryImpl: RemoteRepository {
 
     private val retrofit by lazy {
         Retrofit.Builder()
@@ -23,10 +22,6 @@ class RemoteRepositoryImpl: RemoteRepository {
     }
 
     override fun getFoodList(ingredient: String): HintsList? {
-
-        val request = retrofit.getFoodList(ingredient = ingredient).request()
-        Log.d("pizza request", request.toString())
-
         return let {
             retrofit.getFoodList(ingredient = ingredient).execute().body()
         }

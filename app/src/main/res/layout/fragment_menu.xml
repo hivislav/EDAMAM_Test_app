@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".presentation.view.MenuFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_main" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarMenuFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarMenuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll">
+
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollViewBannersMenuFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/bannerOneMenuFragment"
+                            android:layout_width="300dp"
+                            android:layout_height="112dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/banner_pizza_one" />
+
+                        <ImageView
+                            android:id="@+id/bannerTwoMenuFragment"
+                            android:layout_width="300dp"
+                            android:layout_height="112dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/banner_pizza_two" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/scrollViewChipsMenuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupMenuFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="88dp"
+                        android:layout_height="32dp"
+                        android:text="Пицца"
+                        android:textSize="13sp"
+                        android:textAlignment="center" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="88dp"
+                        android:layout_height="32dp"
+                        android:text="Комбо"
+                        android:textAlignment="center" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="88dp"
+                        android:layout_height="32dp"
+                        android:text="Десерты"
+                        android:textAlignment="center" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="88dp"
+                        android:layout_height="32dp"
+                        android:text="Напитки"
+                        android:textAlignment="center" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenuFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            tools:listitem="@layout/item_menu">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
