@@ -7,17 +7,20 @@
     tools:context="ru.hivislav.edamamtestapp.presentation.view.MainActivity">
 
     <item
-        android:title="1"
+        android:title="Меню"
         android:orderInCategory="1"
+        android:icon="@drawable/ic_menu"
         app:showAsAction="ifRoom" />
 
     <item
-        android:title="2"
+        android:title="Профиль"
         android:orderInCategory="2"
+        android:icon="@drawable/ic_profile"
         app:showAsAction="ifRoom" />
 
     <item
-        android:title="3"
+        android:title="Корзина"
         android:orderInCategory="3"
+        android:icon="@drawable/ic_trash"
         app:showAsAction="ifRoom" />
 </menu>
