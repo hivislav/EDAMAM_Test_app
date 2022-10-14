@@ -1,8 +1,9 @@
-package ru.hivislav.edamamtestapp
+package ru.hivislav.edamamtestapp.presentation.view
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import ru.hivislav.edamamtestapp.R
 import ru.hivislav.edamamtestapp.data.RemoteRepositoryImpl
 
 class MainActivity : AppCompatActivity() {
