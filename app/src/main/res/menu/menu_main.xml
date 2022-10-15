@@ -7,19 +7,19 @@
     tools:context="ru.hivislav.edamamtestapp.presentation.view.MainActivity">
 
     <item
-        android:title="Меню"
+        android:title="@string/menu_item_navigation_bottom"
         android:orderInCategory="1"
         android:icon="@drawable/ic_menu"
         app:showAsAction="ifRoom" />
 
     <item
-        android:title="Профиль"
+        android:title="@string/profile_item_navigation_bottom"
         android:orderInCategory="2"
         android:icon="@drawable/ic_profile"
         app:showAsAction="ifRoom" />
 
     <item
-        android:title="Корзина"
+        android:title="@string/trash_item_navigation_bottom"
         android:orderInCategory="3"
         android:icon="@drawable/ic_trash"
         app:showAsAction="ifRoom" />

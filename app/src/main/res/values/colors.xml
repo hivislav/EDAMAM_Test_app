@@ -8,10 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
     <color name="base_pink">#FD3A69</color>
     <color name="chip_background">#33FD3A69</color>
     <color name="my_color_primary">#FBFBFB</color>
     <color name="background_white">#FBFBFB</color>
     <color name="dark_white">#FFFFFF</color>
+    <color name="city_text_view_dark_color">#222831</color>
+    <color name="item_title_text_color">#222831</color>
 </resources>

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="@color/background_white"
+    android:background="@color/dark_white"
     tools:context=".presentation.view.MenuFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,25 +17,28 @@
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
             android:orientation="horizontal"
-            android:background="@color/background_white">
+            android:background="@color/dark_white">
 
             <androidx.constraintlayout.widget.Group
                 android:id="@+id/chooseCityGroupMenuFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:constraint_referenced_ids="cityTextViewMenuFragment, checkMenuFragment"/>
+                android:clickable="true"
+                app:constraint_referenced_ids="cityTextViewMenuFragment, checkMenuFragment"
+                android:focusable="true" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/cityTextViewMenuFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="56dp"
-                android:gravity="center_vertical"
-                android:textSize="16sp"
                 android:layout_marginStart="16dp"
-                android:textColor="#222831"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:text="@string/city_moscow_text_view_menu_fragment"
+                android:textColor="@color/city_text_view_dark_color"
+                android:textSize="@dimen/text_size_menu_fragment_16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="Москва"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/checkMenuFragment"
@@ -45,7 +48,8 @@
                 android:gravity="center_vertical"
                 android:layout_height="56dp"
                 app:layout_constraintStart_toEndOf="@id/cityTextViewMenuFragment"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/check_symbol_city_menu_fragment" />
 
             <ImageView
                 android:src="@drawable/ic_logo"
@@ -54,9 +58,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginEnd="16dp"
-                android:layout_height="56dp"/>
-
-
+                android:layout_height="56dp"
+                android:contentDescription="@string/logo_button_menu_fragment" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -68,15 +71,16 @@
             android:id="@+id/appbarMenuFragment"
             android:layout_width="match_parent"
             android:layout_height="216dp"
-            android:background="@color/background_white"
-            android:fitsSystemWindows="true">
+            android:background="@color/dark_white"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/collapsingToolbarMenuFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
-                android:background="@color/background_white"
+                android:background="@color/dark_white"
                 app:layout_scrollFlags="scroll">
 
                 <HorizontalScrollView
@@ -93,34 +97,26 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/bannerOneMenuFragment"
-                            android:layout_width="300dp"
-                            android:layout_height="112dp"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            app:cardCornerRadius="10dp">
+                            style="@style/BannerCardViewStyle">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/banner_pizza_one"/>
+                                android:src="@drawable/banner_pizza_one"
+                                android:contentDescription="@string/ads_banner_menu_fragment" />
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/bannerTwoMenuFragment"
-                            android:layout_width="300dp"
-                            android:layout_height="112dp"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            app:cardCornerRadius="10dp">
+                            style="@style/BannerCardViewStyle">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/banner_pizza_two"/>
+                                android:src="@drawable/banner_pizza_two"
+                                android:contentDescription="@string/ads_banner_menu_fragment" />
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
@@ -132,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:background="@color/background_white"
+                android:background="@color/dark_white"
                 android:scrollbars="none">
 
                 <com.google.android.material.chip.ChipGroup
@@ -146,19 +142,19 @@
                     <com.google.android.material.chip.Chip
                         style="@style/ChipStyle"
                         android:checked="true"
-                        android:text="Пицца"/>
+                        android:text="@string/pizza_chip_text_menu_fragment"/>
 
                     <com.google.android.material.chip.Chip
                         style="@style/ChipStyle"
-                        android:text="Комбо"/>
+                        android:text="@string/combo_chip_text_menu_fragment"/>
 
                     <com.google.android.material.chip.Chip
                         style="@style/ChipStyle"
-                        android:text="Десерты"/>
+                        android:text="@string/sweet_chip_text_menu_fragment"/>
 
                     <com.google.android.material.chip.Chip
                         style="@style/ChipStyle"
-                        android:text="Напитки"/>
+                        android:text="@string/drinks_chip_text_menu_fragment"/>
 
                 </com.google.android.material.chip.ChipGroup>
             </HorizontalScrollView>
@@ -169,7 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_behavior=".presentation.view.RecyclerViewMenuFragmentBehavior"
             tools:listitem="@layout/item_menu">
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
