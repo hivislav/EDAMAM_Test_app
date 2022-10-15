@@ -28,7 +28,6 @@ object RemoteRepositoryImpl: RemoteRepository {
     }
 
     override fun getFood(foodId: String): Food {
-        //TODO
         return Food("", "", Nutrients(0.0, 0.0, 0.0, 0.0, 0.0), "")
     }
 }

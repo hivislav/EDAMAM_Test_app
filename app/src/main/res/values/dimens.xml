@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Item recycler view. -->
+    <dimen name="text_size_item_menu_fragment_16sp">16sp</dimen>
+    <dimen name="text_size_item_menu_fragment_14sp">14sp</dimen>
+    <dimen name="text_size_item_menu_fragment_13sp">13sp</dimen>
+
+    <!-- menu fragment. -->
+    <dimen name="text_size_menu_fragment_16sp">16sp</dimen>
+    <dimen name="text_size_menu_fragment_13sp">13sp</dimen>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">@dimen/text_size_menu_fragment_13sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="chipCornerRadius">6dp</item>
+        <item name="android:textColor">@drawable/selector_text_chips</item>
+        <item name="chipBackgroundColor">@drawable/selector_chips</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@drawable/selector_button</item>
+    </style>
+
+    <style name="BannerCardViewStyle">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">112dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="MyBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="fontFamily">@font/sf_ui_text_medium</item>
+    </style>
+
+</resources>
