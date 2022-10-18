@@ -9,6 +9,7 @@ Test app for working with Coordinator layout, Collapsing toolbar and behaviors
 - Ассинхронная работа реализована с помощью Coroutines
 - Реализован Collapsing toolbar с кастомным behavior для затемнения тулбара при скролле
 - Использованы Recycler view и diff utils
+- Clean Architecture
 
 https://user-images.githubusercontent.com/99187338/196417468-2db750dd-57e7-4faa-856b-f57d32796fac.mp4
 
